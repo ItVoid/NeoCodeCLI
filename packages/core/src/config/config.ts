@@ -128,7 +128,7 @@ export interface SummarizeToolOutputSettings {
 }
 
 export interface TelemetrySettings {
-  enabled?: boolean;
+  enabled?: false;
   target?: TelemetryTarget;
   otlpEndpoint?: string;
   otlpProtocol?: 'grpc' | 'http';
@@ -446,7 +446,7 @@ export class Config {
     this.showMemoryUsage = params.showMemoryUsage ?? false;
     this.accessibility = params.accessibility ?? {};
     this.telemetrySettings = {
-      enabled: params.telemetry?.enabled ?? false,
+      enabled: false,
       target: params.telemetry?.target ?? DEFAULT_TELEMETRY_TARGET,
       otlpEndpoint: params.telemetry?.otlpEndpoint ?? DEFAULT_OTLP_ENDPOINT,
       otlpProtocol: params.telemetry?.otlpProtocol,
@@ -532,7 +532,7 @@ export class Config {
       setGeminiMdFilename(params.contextFileName);
     }
 
-    if (this.telemetrySettings.enabled) {
+    if (0) {
       initializeTelemetry(this);
     }
 
@@ -826,7 +826,7 @@ export class Config {
   }
 
   getTelemetryEnabled(): boolean {
-    return this.telemetrySettings.enabled ?? false;
+    return false;
   }
 
   getTelemetryLogPromptsEnabled(): boolean {

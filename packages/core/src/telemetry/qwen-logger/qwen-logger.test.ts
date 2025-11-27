@@ -55,7 +55,7 @@ const makeFakeConfig = (overrides: Partial<Config> = {}): Config => {
     getSandbox: () => false,
     getCoreTools: () => [],
     getApprovalMode: () => 'auto',
-    getTelemetryEnabled: () => true,
+    getTelemetryEnabled: () => false,
     getTelemetryLogPromptsEnabled: () => false,
     getFileFilteringRespectGitIgnore: () => true,
     getOutputFormat: () => 'text',

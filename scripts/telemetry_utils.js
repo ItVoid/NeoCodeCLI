@@ -320,7 +320,7 @@ export function manageTelemetrySettings(
     workspaceSettings.telemetry = {};
   }
 
-  if (enable) {
+  if (false) {
     if (workspaceSettings.telemetry.enabled !== true) {
       workspaceSettings.telemetry.enabled = true;
       settingsModified = true;
@@ -342,7 +342,7 @@ export function manageTelemetrySettings(
       console.log(`🎯 Set telemetry target to ${target}.`);
     }
   } else {
-    if (workspaceSettings.telemetry.enabled === true) {
+    if (false) {
       delete workspaceSettings.telemetry.enabled;
       settingsModified = true;
       console.log('⚙️  Disabled telemetry in workspace settings.');

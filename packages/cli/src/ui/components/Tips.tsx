@@ -25,17 +25,8 @@ export const Tips: React.FC<TipsProps> = ({ config }) => {
       <Text color={theme.text.primary}>
         {t('2. Be specific for the best results.')}
       </Text>
-      {geminiMdFileCount === 0 && (
-        <Text color={theme.text.primary}>
-          3. Create{' '}
-          <Text bold color={theme.text.accent}>
-            QWEN.md
-          </Text>{' '}
-          {t('files to customize your interactions with Qwen Code.')}
-        </Text>
-      )}
       <Text color={theme.text.primary}>
-        {geminiMdFileCount === 0 ? '4.' : '3.'}{' '}
+        {'3.'}
         <Text bold color={theme.text.accent}>
           /help
         </Text>{' '}

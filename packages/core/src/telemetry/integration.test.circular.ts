@@ -28,7 +28,7 @@ describe('Circular Reference Integration Test', () => {
   it('should handle HttpsProxyAgent-like circular references in qwen logging', () => {
     // Create a mock config with proxy
     const mockConfig = {
-      getTelemetryEnabled: () => true,
+      getTelemetryEnabled: () => false,
       getUsageStatisticsEnabled: () => true,
       getSessionId: () => 'test-session',
       getModel: () => 'test-model',
@@ -79,7 +79,7 @@ describe('Circular Reference Integration Test', () => {
 
   it('should handle event overflow without memory leaks', () => {
     const mockConfig = {
-      getTelemetryEnabled: () => true,
+      getTelemetryEnabled: () => false,
       getUsageStatisticsEnabled: () => true,
       getSessionId: () => 'test-session',
       getDebugMode: () => true,

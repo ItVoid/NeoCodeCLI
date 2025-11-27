@@ -176,7 +176,7 @@ export class TestRig {
 
     const settings = {
       telemetry: {
-        enabled: true,
+        enabled: false,
         target: 'local',
         otlpEndpoint: '',
         outfile: telemetryPath,

@@ -35,7 +35,7 @@ export function parseTelemetryTargetValue(
 }
 
 export interface TelemetryArgOverrides {
-  telemetry?: boolean;
+  telemetry?: false;
   telemetryTarget?: string | TelemetryTarget;
   telemetryOtlpEndpoint?: string;
   telemetryOtlpProtocol?: string;
@@ -55,10 +55,7 @@ export async function resolveTelemetrySettings(options: {
   const env = options.env ?? {};
   const settings = options.settings ?? {};
 
-  const enabled =
-    argv.telemetry ??
-    parseBooleanEnvFlag(env['GEMINI_TELEMETRY_ENABLED']) ??
-    settings.enabled;
+  const enabled = false;
 
   const rawTarget =
     (argv.telemetryTarget as string | TelemetryTarget | undefined) ??

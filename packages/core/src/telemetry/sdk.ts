@@ -73,7 +73,7 @@ function parseOtlpEndpoint(
 }
 
 export function initializeTelemetry(config: Config): void {
-  if (telemetryInitialized || !config.getTelemetryEnabled()) {
+  if (telemetryInitialized) {
     return;
   }
 
@@ -162,7 +162,7 @@ export function initializeTelemetry(config: Config): void {
     if (config.getDebugMode()) {
       console.log('OpenTelemetry SDK started successfully.');
     }
-    telemetryInitialized = true;
+    telemetryInitialized = false;
     initializeMetrics(config);
   } catch (error) {
     console.error('Error starting OpenTelemetry SDK:', error);

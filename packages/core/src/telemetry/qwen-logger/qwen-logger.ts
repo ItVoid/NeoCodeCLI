@@ -376,9 +376,8 @@ export class QwenLogger {
         vertex_ai_enabled: event.vertex_ai_enabled,
         debug_enabled: event.debug_enabled,
         mcp_servers: event.mcp_servers,
-        telemetry_enabled: event.telemetry_enabled,
-        telemetry_log_user_prompts_enabled:
-          event.telemetry_log_user_prompts_enabled,
+        telemetry_enabled: false,
+        telemetry_log_user_prompts_enabled: false,
       },
     });
 
