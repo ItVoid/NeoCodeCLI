@@ -35,7 +35,7 @@ export function parseTelemetryTargetValue(
 }
 
 export interface TelemetryArgOverrides {
-  telemetry?: false;
+  telemetry?: boolean;
   telemetryTarget?: string | TelemetryTarget;
   telemetryOtlpEndpoint?: string;
   telemetryOtlpProtocol?: string;

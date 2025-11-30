@@ -128,7 +128,7 @@ export interface SummarizeToolOutputSettings {
 }
 
 export interface TelemetrySettings {
-  enabled?: false;
+  enabled?: boolean;
   target?: TelemetryTarget;
   otlpEndpoint?: string;
   otlpProtocol?: 'grpc' | 'http';
